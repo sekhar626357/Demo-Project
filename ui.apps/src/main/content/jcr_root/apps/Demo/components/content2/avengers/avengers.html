@@ -1,0 +1,14 @@
+<sly data-sly-use.accordion="${'com.adobe.aem.guides.demo.core.models.AccordionListModel'}"></sly>
+<sly data-sly-test.configured="${accordion.configured}"></sly>
+<sly data-sly-test="${wcmmode.edit && !configured}">
+    <div data-emptytext="${component.title}" class="cq-placeholder"></div>
+</sly>
+<div data-sly-test="${configured}">
+    <h2 class="accordion__title js-accordion-title">${accordion.title}</h2>
+    <div class="" data-sly-list.accordions="${accordion.accordionList}">
+        <h4> ${accordions.title}</h4>
+        <ul data-sly-list="${accordions.bulletPointList}">
+            <li class="accordion__text">${item.description @ context='html'}</li>
+        </ul>
+    </div>
+</div>

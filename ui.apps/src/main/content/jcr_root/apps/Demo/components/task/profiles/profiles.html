@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.adobe.aem.guides.demo.core.models.ProfilesModel">
+
+
+    <p>Name: ${model.name}</p>
+
+
+    <p>Selected Image: ${model.selectedImage}</p>
+
+
+	 <sly data-sly-test="${model.imagePath}">
+        <img src="${model.imagePath}" alt="${model.selectedImage}" style="max-width: 400px;" />
+    </sly>
+
+
+
+</sly>

@@ -1,0 +1,40 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Sidebar">
+
+		<h1>Tab-1</h1>
+		<b>Logo-Path:${obj.tab1Logo}</b> <br>
+
+		<b>Logo-Mobile-Image:${obj.tab1Mobile}</b> <br>
+
+		<b>Logo-Link:${obj.tab1Link}</b> <br>
+
+		<b>Enable Switch:${obj.tab1Box}</b> <br>
+
+		<h1>Tab-2</h1>
+		<div data-sly-list.mField="${obj.multiField}">
+				<li>${mField.textField}</li>
+				<li>${mField.pathField}</li>
+
+		</div>
+
+		<h1>Tab-3</h1>
+		<div data-sly-list.mField1="${obj.multiField1}">
+				<li>${mField1.deskIcon}</li>
+				<li>${mField1.mobileIcon}</li>
+				
+				<ul data-sly-list.item1="${mField1.multifieldField2}">
+            	 <li>
+                
+                  ${item1.pathField3}
+
+            	 </li>
+       	 		</ul>
+		</div>
+		<h1>Tab-4</h1>
+		<li>${obj.countryList}</li>
+
+
+		
+
+
+
+</div>

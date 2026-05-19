@@ -1,0 +1,16 @@
+<sly data-sly-use.header2="com.adobe.aem.guides.demo.core.models.Header2">
+
+	<div data-sly-test="${header2.checkBox}">
+    <p>${header2.pathField}</p>
+    <p>${header2.textField}</p>
+    <sly data-sly-list.item="${header2.multiField}">
+            <p>${item.mtextField}</p>
+            <p>${item.datePicker}</p>
+    </sly>
+
+	</div>
+
+	<div data-sly-test="${!header2.checkBox}">
+        <p>No data available.</p>
+    </div>
+</sly>

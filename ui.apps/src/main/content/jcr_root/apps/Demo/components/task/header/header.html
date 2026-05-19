@@ -1,0 +1,27 @@
+<sly data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Headertask1">
+
+	<div data-sly-test="${obj.checkBox}">
+
+		<img src= "${obj.pathField}"/>
+
+		<p>${obj.textField}</p>
+
+		<p>${obj.text @ context='html'}</p>
+
+		<sly data-sly-list.item="${obj.multiField}">
+
+			<p>${item.mtextField}</p>
+
+			<p>${item.datePicker}</p>
+
+		</sly>
+
+	</div>
+
+	<div data-sly-test="${!obj.checkBox}">
+
+		<p>No data Available from Task-1...</p>
+
+	</div>
+
+</sly>

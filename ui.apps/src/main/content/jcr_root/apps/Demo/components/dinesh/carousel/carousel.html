@@ -1,0 +1,20 @@
+<sly data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Carousel1">
+
+
+				<sly data-sly-list.item="${obj.multiField}">
+
+								<p>${item.textField}</p>
+
+								<p>${item.pathField}</p>
+
+								<sly data-sly-list.item1="${item.nestedMultifield}">
+
+										<p>${item1.nestedtextField}</p>
+
+								</sly>
+
+				</sly>
+
+
+
+</sly>

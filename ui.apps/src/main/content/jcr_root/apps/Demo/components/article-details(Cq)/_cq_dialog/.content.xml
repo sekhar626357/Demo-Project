@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Airticle Details Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <article-title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Airticle-Title"
+                name="./articleTitle"/>
+            <article-desc
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Airticle-Desc"
+                name="./articleDesc"/>
+            <article-image
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Airticle-Image"
+                name="./articleImage"
+                rootPath="/content/dam/Demo"/>
+            <article-status
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                name="./articleStatus"
+                text="Airticle-Status"
+                value="{Boolean}true"/>
+            <title-type
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Title-Type"
+                name="./articleSelect">
+                <items jcr:primaryType="nt:unstructured">
+                    <h1
+                        jcr:primaryType="nt:unstructured"
+                        text="Heading 1"
+                        value="h1"/>
+                    <h2
+                        jcr:primaryType="nt:unstructured"
+                        text="Heading 2"
+                        value="h2"/>
+                    <h3
+                        jcr:primaryType="nt:unstructured"
+                        text="Heading 3"
+                        value="h3"/>
+                    <h4
+                        jcr:primaryType="nt:unstructured"
+                        text="Heading 4"
+                        value="h4"/>
+                </items>
+            </title-type>
+            <read-time
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                fieldLabel="Airticle-read-time"
+                name="./readtime"/>
+            <airticle-expiry
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                fieldLabel="Airticle-Expiry"
+                name="./airticleExpiry"/>
+            <article-labels
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                fieldLabel="Airticle-Labels">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    name="./articleLabel"/>
+            </article-labels>
+            <related-articles
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Related-Airticles">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./relatedArticles">
+                    <items jcr:primaryType="nt:unstructured">
+                        <article-title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Airticle-Title"
+                            name="./articleTitle"/>
+                        <article-path
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Airticle-Path"
+                            name="./articlePath"
+                            rootPath="/content/Demo/us/en"/>
+                    </items>
+                </field>
+            </related-articles>
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <airticle-basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic-Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured"/>
+                    </airticle-basic>
+                    <airticle-advanced
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Advanced-Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured"/>
+                    </airticle-advanced>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

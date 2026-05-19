@@ -1,0 +1,37 @@
+kk
+<sly data-sly-test.selectedAuthor="${properties.authors}"></sly>
+
+<div class="author-info-wrapper">
+
+  <!-- ================= AUTHOR 1 ================= -->
+  <div data-sly-test="${selectedAuthor == 'author1'}" class="author-block author1">
+
+    <h3>Author Info 1</h3>
+
+    <p data-sly-test="${properties.fieldA}">
+      <strong>Field A:</strong> ${properties.fieldA}
+    </p>
+
+    <p data-sly-test="${properties.fieldB}">
+      <strong>Field B:</strong> ${properties.fieldB}
+    </p>
+
+  </div>
+
+
+  <!-- ================= AUTHOR 2 ================= -->
+  <div data-sly-test="${selectedAuthor == 'author2'}" class="author-block author2">
+
+    <h3>Author Info 2</h3>
+
+    <p data-sly-test="${properties.fieldC}">
+      <strong>Field C:</strong> ${properties.fieldC}
+    </p>
+
+    <p data-sly-test="${properties.fieldD}">
+      <strong>Field D:</strong> ${properties.fieldD}
+    </p>
+
+  </div>
+
+</div>

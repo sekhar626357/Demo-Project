@@ -1,0 +1,24 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.SidebarSurge0">
+    <p>${obj.pFieldt1}</p>
+    <p>${obj.pFieldt2}</p>
+    <p>${obj.pFieldt3}</p>
+    <p>${obj.pFieldt4}</p>
+
+
+    <div data-sly-list.obj1="${obj.mFieldt2}">
+        <p>${obj1.pFieldt5}</p>
+        <p>${obj1.pFieldt6}</p>
+    </div>
+    <div data-sly-list.obj2="${obj.mFieldt3}">
+            <p>${obj2.pFieldt7}</p>
+            <p>${obj2.pFieldt8}</p>
+            <div data-sly-list.obj3="${obj2.nFieldt3}">
+                <p>${obj3.pFieldt9}</p>
+
+            </div>
+    </div>
+
+	<p>${obj.pFieldt10}</p>
+
+    
+</div>

@@ -1,0 +1,39 @@
+<sly data-sly-use.sidebar="com.adobe.aem.guides.demo.core.models.Sidebaar">
+
+
+         <div data-sly-test="${sidebar.enableSwitch}">
+
+			<p>${sidebar.logoPath}</p>
+			<p>${sidebar.logoMobileImage}</p>
+			<p>${sidebar.logoLink}</p>
+			
+
+
+			<sly data-sly-list.item="${sidebar.multiField}">
+
+				<p>${item.name}</p>
+				<p>${item.image}</p>
+
+			</sly>
+
+			<sly data-sly-list.item1="${sidebar.multiField1}">
+
+					<p>${item1.desktopIcon}</p>
+					<p>${item1.mobileIcon}</p>
+
+						<sly data-sly-list.item2="${item1.nmultiField}">
+
+								<p>${item2.navigationURL}</p>
+
+						</sly>
+
+			</sly>
+
+
+			 <p>${sidebar.region}</p>
+
+        </div>
+        <div data-sly-test="${!sidebar.enableSwitch}">
+        <p>No data Available from Task-3</p>
+        </div>
+</sly>

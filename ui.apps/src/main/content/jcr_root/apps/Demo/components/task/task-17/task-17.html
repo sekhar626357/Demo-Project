@@ -1,0 +1,17 @@
+<div data-sly-use.model="com.adobe.aem.guides.demo.core.models.PaginatedPagesModel">
+
+    <h2>Visible Pages</h2>
+    <ul>
+        <sly data-sly-list.path="${model.currentPagePaths}">
+            <li>${path}</li>
+        </sly>
+    </ul>
+
+    <h2>Hidden Pages</h2>
+    <ul>
+        <sly data-sly-list.path="${model.remainingPagePaths}">
+            <li>${path}</li>
+        </sly>
+    </ul>
+
+</div>

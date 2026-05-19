@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "Demo/components/practice/banner",
+  "title": "Welcome Title",
+  "subtitle": "Your Subtitle Here",
+  "ctaLink": "/contact-us"
+}

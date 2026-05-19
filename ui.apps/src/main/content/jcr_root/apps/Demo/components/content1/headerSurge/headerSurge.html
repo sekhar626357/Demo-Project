@@ -1,0 +1,16 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='headerSurge'}" data-sly-unwrap></meta>
+
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Headertask">
+    <img src="${obj.pathField}"class="styled-image">
+    <p>Text_Field:${obj.textField}</p>
+    <p>CheckBox:${obj.checkBox}</p>
+    <div data-sly-list.obj1="${obj.multiField}">
+    <p>MPath_Field:${obj1.multiText}</p>
+    <p>MText_Field:${obj1.multiPicker}</p>
+    </div>
+</div>
+<button onclick="myFunction()">on click</button>
+

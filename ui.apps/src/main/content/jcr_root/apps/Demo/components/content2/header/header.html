@@ -1,0 +1,11 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Header">
+        <h1>Path : ${obj.pathField}</h1>
+        <h2>Text : ${obj.textField}</h2>
+
+    ==========Multifield==========
+    <sly data-sly-list.mField="${obj.multiField}">
+          <li>${mField.textField1}</li>
+            <li>${'dd-MM-yyy' @ format=mField.datePicker}</li>
+    </sly>
+    <h3>Check : ${obj.checkBox}</h3>
+</div>

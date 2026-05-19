@@ -1,0 +1,20 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.CarouselSurge">
+    <div data-sly-list.obj1="${obj.multiField}">
+        <p>TextField :${obj1.textField}</p>
+
+		<img src="${obj1.pathField}" class="styled-image">
+			<style>
+ 					 .styled-image {
+    					width: 1450px;
+   						 height: 50px;
+    						border: 2px solid black;
+    						border-radius: 10px; /* Makes corners rounded */
+   							 box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+  								}
+			</style>
+
+        <div data-sly-list.obj2="${obj1.nestField}">
+            <p>TextField :${obj2.nesText}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<sly data-sly-use.header1Obj="com.adobe.aem.guides.demo.core.models.Header1">
+
+    <div data-sly-test="${header1Obj.checkBox}">
+        <p>${header1Obj.pathField}</p>
+        <p>${header1Obj.textField}</p>
+
+        <sly data-sly-list.item="${header1Obj.multiField}">
+            <p>${item.mtextField}</p>
+            <p>${item.datePicker}</p>
+        </sly>
+    </div>
+
+    <div data-sly-test="${!header1Obj.checkBox}">
+        <p>No data available from Task-1.</p>
+    </div>
+
+</sly>

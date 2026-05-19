@@ -1,0 +1,53 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Sidebar">
+
+		<p>Logo-Path:${obj.tab1Logo}</p>
+
+		<P>Logo-Mobile-Image:<img src="${obj.tab1Mobile}" class="styled-image0"><p>
+
+		<p>Logo-Link:${obj.tab1Link}</p> 
+
+		<p>Enable Switch:${obj.tab1Box}</p>
+
+		<div data-sly-list.obj1="${obj.multiField}">
+				<p>${obj1.textField}</p>
+				<p>${obj1.pathField}</p>
+		</div>
+
+		<div data-sly-list.obj2="${obj.multiField1}">
+				<p>Descktop Icon:<img src="${obj2.deskIcon}"class="styled-image1"></p><br>
+				<p>Mobile Icon:<img src="${obj2.mobileIcon}"class="styled-image2"></p>
+
+				<div data-sly-list.obj3="${obj2.multifieldField2}">
+
+                	 <p>${obj3.pathField3}</p>
+       	 		</div>
+		</div>
+		<p>${obj.countryList}</p>
+</div>
+
+
+<style>
+ 	.styled-image0 {
+	width: 20px;
+	 height: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+   	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  								}
+
+    .styled-image1 {
+        width: 20px;
+         height: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  								}
+
+ 	.styled-image2 {
+	width: 20px;
+	 height: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+   	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  								}
+</style>

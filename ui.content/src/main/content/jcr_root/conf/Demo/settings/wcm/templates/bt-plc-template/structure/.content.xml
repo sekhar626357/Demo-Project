@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2025-10-09T17:58:04.796+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/Demo/settings/wcm/templates/bt-plc-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="Demo/components/practice1/bt-Plc-Page"
+        expired="{Date}2025-10-03T17:07:26.078+05:30">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="Demo/components/container"
+            layout="responsiveGrid">
+            <experiencefragment
+                jcr:lastModified="{Date}2025-10-09T17:51:25.695+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                fragmentPath="/content/experience-fragments/Demo/us/en/site/new/master"
+                text="Navbar with Search For the home For UK and global businesses Search Purple Navbar BT About Investors Media Research &amp; development Responsible business Careers Contact us Sub Navbar Our company Our people UK &amp; worldwide Policy &amp; Regulation Our history Digital Switchover Breadcrumb Navigation Home | About BT Group"/>
+            <container
+                jcr:lastModified="{Date}2025-10-08T18:54:14.433+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Demo/components/container"
+                editable="{Boolean}true"/>
+            <experiencefragment_1143850523
+                jcr:lastModified="{Date}2025-10-09T17:58:04.646+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                fragmentPath="/content/experience-fragments/Demo/us/en/site/new1-content-/master"
+                text="Navbar Example For the home For UK and global businesses More sites Site 1 Site 2 Site 3 Footer Example Contact BT Group Sitemap Accessibility Privacy policy About cookies Modern Slavery Statement Digital Services Act © British Telecommunications plc 2025 BT"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

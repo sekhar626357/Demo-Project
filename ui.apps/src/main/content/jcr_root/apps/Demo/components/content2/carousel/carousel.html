@@ -1,0 +1,19 @@
+
+<sly data-sly-use.accordion="${'com.adobe.aem.guides.demo.core.models.Prog1'}"></sly>
+
+</sly>
+<div>
+
+
+    <div class="" data-sly-list.accordions="${accordion.saiDinesh}">
+        <h4> ${accordions.title}</h4>
+
+		<h4> ${accordions.path} </h4>
+
+
+        <ul data-sly-list="${accordions.paruchuruPoint}">
+            <li class="accordion__text">${item.description @ context='html'}</li>
+        </ul>
+
+    </div>
+</div>

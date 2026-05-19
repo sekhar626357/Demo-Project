@@ -1,0 +1,10 @@
+<div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Author3">
+    <h1>${obj.firstName} Mobile Numbers</h1>
+    =================Multifield with single field=================
+    <div data-sly-list.item="${obj.rollnumber}">
+    -----------------Book : ${itemList.count}--------------------
+        <p> Book : <b>${item} </b></p>
+    </div>
+    <p>All Book : <b>${obj.rollnumber @ join=', '}</b></p>
+</div>
+
