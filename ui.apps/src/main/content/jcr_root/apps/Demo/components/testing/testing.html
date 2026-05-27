@@ -1,0 +1,41 @@
+<!--/*
+    Testing Component
+*/-->
+<div data-sly-use.testingModel="com.adobe.aem.guides.demo.core.models.TestingModel"
+     style="padding: 15px; border: 2px dashed #0077cc; background-color: yellow; border-radius: 5px; font-family: Arial, sans-serif;">
+    <h3 style="margin-top: 0; color: #0077cc; font-size: 16px;">Testing Component</h3>
+    <div style="margin-bottom: 8px; font-size: 14px;">
+        <strong>Text Field Value (from Sling Model):</strong> ${testingModel.textField ? testingModel.textField : 'Not configured'}
+    </div>
+    <div style="font-size: 14px;">
+        <strong>Checkbox Field Value (from Sling Model):</strong> ${testingModel.checkboxField ? 'Checked' : 'Unchecked'}
+    </div>
+</div>
+
+<script>
+    (function() {
+        console.log("=== Testing Component Dropped / Loaded ===");
+        var pagePath = "${currentPage.path @ context='scriptString'}";
+        console.log("Current Page Path:", pagePath);
+        console.log("Component Text Value:", "${testingModel.textField @ context='scriptString'}");
+        console.log("Component Checkbox Value:", "${testingModel.checkboxField ? 'true' : 'false' @ context='scriptString'}");
+        
+        // Fetch page details from the JCR via .json
+        var url = pagePath + '.json';
+        fetch(url)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("HTTP error " + response.status);
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                console.log("Page Data (JCR Properties):", data);
+            })
+            .catch(function(err) {
+                console.warn("Failed to fetch full JCR data, outputting page metadata instead:", err);
+                console.log("Page Title:", "${currentPage.title @ context='scriptString'}");
+                console.log("Page Description:", "${currentPage.description @ context='scriptString'}");
+            });
+    })();
+</script>
